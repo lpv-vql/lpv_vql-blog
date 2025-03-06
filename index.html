@@ -1,131 +1,96 @@
 <!DOCTYPE html>
 <html lang="ja">
-
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLOG</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind&display=swap">
+    <title>lpv_vql</title>
     <style>
         body {
-            font-family: 'Hind', sans-serif;
-            background-color: #fafafa;
+            background-image: url('https://u.cubeupload.com/gazoulpv_vql/k0NwY0pKnVzNRxR17401.png');
+            background-size: 150% auto;
+            background-position: left top;
+            background-repeat: no-repeat;
             margin: 0;
-            padding: 0;
-        }
-
-        header,
-        footer {
-            background-color: #333;
-            color: white;
+            font-family: terminal, monaco, monospace;
             text-align: center;
-            padding: 30px;
+            color: black;
+            position: relative;
         }
 
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            z-index: -1;
         }
 
-        h1,
-        h2 {
-            margin-top: 0;
+        ul {
+            display: inline-block;
+            text-align: left;
+            padding-left: 20px;
         }
 
-        section {
-            margin-bottom: 20px;
+        h1#hello {
+            font-size: 100pt;
         }
 
-        .blog-post {
-            border-bottom: 1px solid #ddd;
-            padding: 15px 0;
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
         }
 
-        .blog-post:last-child {
-            border-bottom: none;
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .blog-title {
-            font-size: 20px;
-            font-weight: bold;
+        .container {
+            position: relative;
+            z-index: 1;
+            padding: 50px 10%;
         }
 
-        .blog-date {
-            font-size: 12px;
-            color: gray;
+        .nav-links {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            text-align: left;
+            z-index: 2;
         }
 
-        footer a {
-            color: white;
+        .nav-links a {
+            font-size: 16pt;
+            color: black;
             text-decoration: none;
         }
 
-        footer a:hover {
-            color: lightgray;
-        }
-
-        /* ヘッダーにボタンを追加 */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .header-buttons {
-            display: flex;
-        }
-
-        .header-buttons a {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            margin-left: 10px;
-            border-radius: 0px;
-            text-decoration: none;
-        }
-
-        /* h1を中央揃えにする */
-        header h1 {
-            text-align: center;
-            flex-grow: 1; /* h1が中央に寄るようにflex-growを設定 */
+        .nav-links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
-
 <body>
-    <header>
-        <h1>BLOG</h1>
-    </header>
-    <p style="font-size: 5px; color: #fafafa;">こんにちは。よく見つけられたね。</p>
-    <div class="header-buttons">
-        <a href="https://lpv-vql.github.io/lpv_vql-profile/">HOME</a>
-        <a href="https://lpv-vql.github.io/lpv_vql-blog/">BLOG</a>
-        <a href="https://lpv-vql.github.io/lpv_vql-notice/">NOTICE</a>
+    <div class="nav-links">
+        <a href="https://lpv-vql.github.io/lpv_vql-profile/">ホーム</a>
+        <a href="https://lpv-vql.github.io/lpv_vql-blog/">ブログ</a>
+        <a href="https://lpv-vql.github.io/lpv_vql-tool/">ツール</a>
     </div>
-    <main>
-        <h3>lpv_vqlの超不定期更新ブログです</h3>
-        <section class="blog-post">
-            <p class="blog-date">2025.02.07</p>
-            <p class="blog-title">こんにちは。lpv_vqlです。</p>
-            <p>初めてのブログ～～～!!</p>
-            <a href="https://lpv-vql.github.io/lpv_vql-blog-1/">続きを読む</a>
-        </section>
-    </main>
-    <footer>
-        <p>
-            ©2025 lpv_vql All rights reserved.
-            │scratch <a href="https://scratch.mit.edu/users/lpv_vql/">lpv_vql</a>
-            <a href="https://scratch.mit.edu/users/Ougonhi_Hakuginhi/">Ougonhi_Hakuginhi</a>
-            <a href="https://scratch.mit.edu/users/sub_pv/">sub_pv</a>
-            │GitHub <a href="https://github.com/lpv-vql">lpv-vql</a>
-            │Qiita <a href="https://qiita.com/lpv_vql">lpv-vql</a>
-        </p>
-    </footer>
 
+    <div class="container">
+        <h2 class="fade-in">ブログ</h2>
+        <ul class="fade-in" style="list-style-type: square;">
+            <li><a href="https://lpv-vql.github.io/lpv_vql-blog-1/">テストブログ</a>
+        </li>
+        </ul>
+    </div>
 </body>
-
 </html>
